@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster:400|Raleway:300,400,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .popup {
+        min-width: 344px;
+        min-height: 100px;
+        background: #9c9c9c;
+        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        text-align: center;
+        color: black;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 1rem;
+    }
+
+    .button {
+        background-color: #000000;
+        position: relative;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 25px;
+        transition: 1s;
+        font-family: "Raleway", sans-serif;
+        color: white;
+    }
+
+    .half {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: rgb(117, 117, 117);
+        pointer-events: none;
+        transition: 1s;
+
+    }
+
+    @keyframes transformToBlue {
+        0% {
+            background-color: #000000;
+        }
+
+        100% {
+            background-color: #ffffff;
+            color: black;
+
+        }
+    }
+
+    @keyframes transformToYellow {
+        0% {
+            background-color: #ffffff;
+        }
+
+        100% {
+            background-color: #000000;
+        }
+    }
+
+    @keyframes moveCircleRight {
+        0% {
+            left: 0;
+            transform: translateX(0);
+            background-color: #838383;
+        }
+
+        100% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #838383;
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        0% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #838383;
+        }
+
+        100% {
+            left: 0;
+            transform: translateX(0);
+            background-color: #838383;
+        }
+    }
+
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div class="popup">
+            <h1>Dark Mode</h1>
+            <p>
+                Just Click to covert your page into Dark Mode
+            </p>
+    
+            <div class="button">
+                <div class="half" style="left: 5px;">Off</div>
+                <div class="half" style="right: 5px; text-align: right;">On</div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./popup.js">
+    </script>
+
+</body>
+
+</html>
